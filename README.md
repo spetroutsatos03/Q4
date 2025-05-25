@@ -1,8 +1,8 @@
 # Q4
-Να υλοποιηθεί το Query 4 χρησιμοποιώντας τo SQL API. Πειραματιστείτε κάνοντας την εισαγωγή των δεδομένων με χρήση αρχείων csv και parquet και σχολιάστε πώς επηρεάζεται η εκτέλεση
+# Να υλοποιηθεί το Query 4 χρησιμοποιώντας τo SQL API. Πειραματιστείτε κάνοντας την εισαγωγή των δεδομένων με χρήση αρχείων csv και parquet και σχολιάστε πώς επηρεάζεται η εκτέλεση
 
-  GNU nano 7.2                                                                                           Q4.py                                                                                                     from pyspark.sql import SparkSession
 
+from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName("Q4").getOrCreate()
 df = spark.read.parquet("hdfs://hdfs-namenode:9000/user/spetroutsatos/data/parquet/yellow_tripdata_2024")
 df.show()
